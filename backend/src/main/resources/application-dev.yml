@@ -1,0 +1,40 @@
+# 开发环境配置
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/smart_service_bot?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+
+  redis:
+    host: localhost
+    port: 6379
+    password:
+
+# AI配置
+ai:
+  openai:
+    api-key: sk-proj-your-openai-api-key-here
+    base-url: https://api.openai.com/v1
+
+# Milvus配置
+milvus:
+  host: localhost
+  port: 19530
+
+# 知识库配置
+knowledge:
+  upload:
+    storage-path: D:/workspace-main/AI-Entrepreneur/smart-service-bot/uploads
+
+# Knife4j文档
+knife4j:
+  enable: true
+
+# 日志配置
+logging:
+  level:
+    com.smartbot: DEBUG
+    org.springframework.ai: DEBUG
+  file:
+    name: logs/dev/smart-service-bot.log
